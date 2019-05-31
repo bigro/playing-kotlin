@@ -16,7 +16,7 @@ class HelloController {
     @GetMapping("count")
     fun count(model: Model): String {
         count++
-        model.addAttribute("count", count);
+        model.addAttribute("count", count)
         return "hello"
     }
 }
