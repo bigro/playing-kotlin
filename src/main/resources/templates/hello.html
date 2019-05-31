@@ -5,10 +5,11 @@
     <title>クリックカウント</title>
 </head>
 <body>
-<p>ボタンを押すとカウントされるよ</p>
-<form th:action="count">
-    <button>クリック</button>
-</form>
-<p th:text="${count}"></p>
+    <p>ボタンを押すとカウントされるよ</p>
+    <form th:action="count">
+        <button>クリック</button>
+    </form>
+    <p th:text="${counts.size()}"></p>
+    <p th:each="count : ${counts}" th:text="${#temporals.format(count.dateTime, 'HH:mm:ss')}"></p>
 </body>
 </html>
