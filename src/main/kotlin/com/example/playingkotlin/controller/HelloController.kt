@@ -11,7 +11,7 @@ class HelloController(val countService: CountService) {
     
     @GetMapping("hello")
     fun hello(model: Model): String {
-        var counts = listOf<Count>()
+        val counts = listOf<Count>()
         model.addAttribute("counts", counts)
         return "hello"
     }
