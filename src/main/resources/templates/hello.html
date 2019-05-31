@@ -2,9 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Hello World</title>
+    <title>クリックカウント</title>
 </head>
 <body>
-<p>Hello World!</p>
+<p>ボタンを押すとカウントされるよ</p>
+<form th:action="count">
+    <button>クリック</button>
+</form>
+<p th:text="${count}"></p>
 </body>
 </html>
